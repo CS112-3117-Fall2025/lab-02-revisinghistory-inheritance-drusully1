@@ -1,7 +1,7 @@
 /**
  * Main.java - Driver class to demonstrate revised historical examples
  * 
- * @author ???
+ * @author Drew Sullivan
  * @version ???
  */
 
@@ -26,5 +26,32 @@ public class Main {
 		System.out.println("REVISED HISTORICAL EVENT EXAMPLE:");
 		System.out.println("====================================================");
 		tulsaMassacre.teach();
+
+		/**
+		RevisedHistoricalEvent tulsaMassacreCopy = new RevisedHistoricalEvent(tulsaDescription, tulsaDay,
+				tulsaRevised, tulsaCitation);
+
+		System.out.println(tulsaMassacre.equals(tulsaMassacreCopy));
+		 **/
+
+		String discoveringAmericaDescription = "Columbus bravely proved the world was round and discovered America.";
+		Date discoveringAmericaDay = new Date(10, 12, 1492);
+		HistoricalEvent discoveringAmerica = new HistoricalEvent(discoveringAmericaDescription, discoveringAmericaDay);
+
+		System.out.println("====================================================");
+		System.out.println("HISTORICAL EVENT EXAMPLE:");
+		System.out.println("====================================================");
+		System.out.println(discoveringAmerica);
+
+
+		String discoveringAmericaRevised = "Educated Europeans already knew the Earth was round. Columbus never reached mainland North America; he landed in the Caribbean. Indigenous peoples had lived there for thousands of years. Also, Norse explorers like Leif Erikson reached North America around 1000 CE.",
+				discoveringAmericaCitation = "https://americanindian.si.edu/nk360/informational/columbus-day-myths";
+		RevisedHistoricalEvent americaDiscovered = new RevisedHistoricalEvent(discoveringAmericaDescription, discoveringAmericaDay,
+				discoveringAmericaRevised, discoveringAmericaCitation);
+
+		System.out.println("\n====================================================");
+		System.out.println("REVISED HISTORICAL EVENT EXAMPLE:");
+		System.out.println("====================================================");
+		americaDiscovered.teach();
 	}
 }
